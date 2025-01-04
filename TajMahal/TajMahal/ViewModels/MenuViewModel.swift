@@ -9,7 +9,7 @@ import Foundation
 
 // Strcture qui gère toute la logique du code
 // Fait l'intermédiaire entre l'affichage et les données
-struct ViewModel {
+struct MenuViewModel {
     
     // Stocke les entrées qui composent le menu du restaurant
     let apetizerArray : [Dish] =
