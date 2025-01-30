@@ -20,9 +20,11 @@ struct LineView: View {
                     .font(.title)
                     .font(.system(size: 23))
                 Spacer()
-              //  Image("Logo")
-                 //   .renderingMode(.template)
-                  //  .foregroundColor(Color.gray)
+                Image("Logo")
+                    .renderingMode(.template)
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(Color.gray)
                    
             }
         }
