@@ -13,18 +13,7 @@ struct MenuView: View {
     // Référence vers le view model qui permet d'accéder aux tableaux d'entrées et de plats du menu
     let menuViewModel: MenuViewModel = MenuViewModel()
     var body: some View {
-//        HStack{
-//            Image("fleche")
-//                .resizable()
-//                .frame(width: 20, height: 20)
-//            
-//            Text("Menu")
-//                .fontWeight(.bold)
-//                .foregroundColor(Color.gray)
-//                .font(.system(size: 18))
-//                .listRowBackground(Color.white.opacity(0.00))
-//        }
-        //NavigationView{
+
             List{
                 Section{
                     ForEach(menuViewModel.apetizerArray, id:  \.name){

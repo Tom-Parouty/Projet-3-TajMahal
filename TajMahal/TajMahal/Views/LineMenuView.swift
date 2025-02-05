@@ -21,7 +21,7 @@ struct LineMenuView: View {
         
     var body: some View {
         
-          
+          // 
             HStack{
                 Image(imageName)
                 
@@ -48,43 +48,49 @@ struct LineMenuView: View {
                             .padding(2)
                         Spacer()
                         
+                        // Condition Piment
+                        
                         if spicelevel == .light {
+                            // Piment rouge
                             Image("truepiment")
                                 .resizable()
                                 .frame(width: 10, height: 10)
                                 .padding(2)
+                            
+                           //  Piment gris
+                            ForEach(0..<2) { _ in
+                                        Image("notPiment")
+                                            .resizable()
+                                            .frame(width: 10, height: 10)
+                                            .padding(2)}
+                            
                         } else if spicelevel == .medium {
+                            // Piment rouge
                             HStack(spacing: 2) {
                                 ForEach(0..<2) { _ in
                                     Image("truepiment")
                                         .resizable()
                                         .frame(width: 10, height: 10)
-                                }
-                            }
+                                        .padding(6)}
+                                
+                                
+                                // Piment gris
+                                Image("notPiment")
+                                            .resizable()
+                                            .frame(width: 10, height: 10)
+                                            .padding(2)}
+                            
                         } else if spicelevel == .hot {
                             HStack(spacing: 2) {
                                 ForEach(0..<3) { _ in
                                     Image("truepiment")
                                         .resizable()
                                         .frame(width: 10, height: 10)
+                                        .padding(5)
                                 }
                             }
                         }
-               //  Boucle piment
-//                        Image("truepiment")
-//                                .resizable()
-//                                .frame(width: 10, height: 10)
-//                                .padding(2)
-//                    
-//                        Image("truepiment")
-//                            .resizable()
-//                            .frame(width: 10, height: 10)
-//                        
-//                        Image("truepiment")
-//                            .resizable()
-//                            .frame(width: 10, height: 10)
-                        
-                        
+
                     }
                 }
             }
